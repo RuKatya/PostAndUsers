@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function MainLayout({ children, title = 'Posts' }) {
-    const [active, useActive] = useState('Home page')
+    const [active, setActive] = useState('Home page')
 
     function isActive(activebtn){
-        useActive(`${activebtn}`) 
+        setActive(`${activebtn}`) 
     }
     return (
         <>
