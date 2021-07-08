@@ -1,0 +1,25 @@
+.bigPosts {
+    background-color: aqua;
+    border: 1px solid black;
+    width: 95%;
+    margin: 0% 2.5%;
+    
+    &__slider {
+        background-color: brown;
+    }
+
+    &__link {
+        position: relative;
+        // padding: 2%;
+
+        &--header {
+            position: absolute;
+            bottom: 15vh;
+            left: 40vw;
+            width: 80%;
+            // top:50%;
+        }
+    }
+
+    
+}

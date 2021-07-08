@@ -1,7 +1,10 @@
+import { bottom } from '@popperjs/core'
 import Head from 'next/head'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function MainLayout({ children, title = 'Posts' }) {
+    const [active, useActive] = useState('Home page')
     return (
         <>
             <Head>
@@ -12,17 +15,29 @@ export default function MainLayout({ children, title = 'Posts' }) {
             <div className="navBar">
                 <span >
                     <Link href="/">
-                        <a >Home page</a>
+                        <a
+                            className="navBar__link navBar__homeBtn"
+                            onClick={() => { useActive(`Home page`) }}
+                            // style={{ borderBottom: active === `Home page` ? "1px solid black" : "none" }}
+                        >Home page</a>
                     </Link>
 
                     {' '}
                     <Link href="/">
-                        <a>All posts </a>
+                        <a
+                            className="navBar__link"
+                            onClick={() => { useActive(`All posts`) }}
+                            style={{ borderBottom: active === `All posts` ? "1px solid black" : "none" }}
+                        >All posts </a>
                     </Link>
 
                     {' '}
                     <Link href="/">
-                        <a>All users</a>
+                        <a
+                            className="navBar__link"
+                            onClick={() => { useActive(`All users`) }}
+                            style={{ borderBottom: active === `All users` ? "1px solid black" : "none" }}
+                        >All users</a>
                     </Link>
                 </span>
 

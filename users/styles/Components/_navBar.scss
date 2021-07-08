@@ -1,6 +1,20 @@
 .navBar {
-    background-color: hotpink;
-    // height: 8vh;
+    border-bottom:1px solid rgb(180, 177, 177)  ;
     padding: 1.5% 2%;
-    color:white;
+    color:black;
+
+    &__homeBtn {
+        color: red;
+        font-weight: bold;
+    }
+
+    &__link {
+        margin: 0% 2%;
+        padding: 1% 1.5%;
+
+    &:hover {
+        background-color: rgba(224, 220, 220, 0.4);
+        transition: all 0.1s;
+        }
+    }
 }
