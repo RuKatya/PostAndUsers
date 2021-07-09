@@ -1,0 +1,31 @@
+.manyPosts {
+    margin: 5% 10%;
+    width: 80%;
+
+    &__display {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 5vw;
+        row-gap: 7vh;
+
+        &--link {
+            border: 1px solid rgba(219, 219, 219, 0.746);
+        }
+
+        &--content {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+
+        &--date {
+            position: relative;
+            left: 70%;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 //Carousel
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
 //semantic ui-react
@@ -8,6 +8,8 @@
 //Components
 @import './Components/navBar';
 @import './Components/bigPost';
+@import './Components/manyPosts';
+@import './Components/oldPosts';
 
 html,
 body {
@@ -28,11 +30,5 @@ a {
 
 .homePage {
   width: 80%;
-  margin: 1% 10%;
-  // border:1px solid red;
-  // background-color: blue;
-}
-
-.manyPosts, .oldPosts {
-  margin-top: 50%;
+  margin: 3% 10%;
 }

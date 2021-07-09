@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,45 +8,35 @@ import Image from 'next/image'
 export default function BigPost({ posts }) {
   //Date
   const date = new Date();
-  const todayDate = date.toDateString()
+  const todayDate = date.toLocaleTimeString()
   console.log(todayDate)
 
   //Arrows
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+  const NextArrow = ({ onClick }) => {
     return (
-      <div
-        className={className}
-        style={{  background: "grey", width:'3vh'}}
-        // onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{   background: "grey", width:'3vh' }}
-        // onClick={onClick}
-      />
-    );
+      <div className="arrow next" onClick={onClick}>
+        <FaArrowRight />
+      </div>
+    )
   }
 
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <FaArrowLeft />
+      </div>
+    )
+  }
 
-
-
-  
   const settings = {
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 500,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />
   };
 
   return (
@@ -59,13 +50,13 @@ export default function BigPost({ posts }) {
             query: { post: posts[0].id }
           }}>
             <a className="bigPosts__link">
-            <div className="bigPosts__link--img">
-              <Image
-                src="/imgs/writeGirl.jpg"
-                alt="Write girl"
-                width="600"
-                height="450" />
-                </div>
+              <div className="bigPosts__link--img">
+                <Image
+                  src="/imgs/writeGirl.jpg"
+                  alt="Write girl"
+                  width="650"
+                  height="450" />
+              </div>
               <div className="bigPosts__link--content">
                 <h4 className="bigPosts__link--content__date">{todayDate}</h4>
                 <h2 className="bigPosts__link--content__header">{posts[0].title}</h2>
@@ -81,13 +72,13 @@ export default function BigPost({ posts }) {
               query: { post: posts[1].id }
             }}>
             <a className="bigPosts__link">
-            <div className="bigPosts__link--img">
-              <Image
-                src="/imgs/tv.jpg"
-                alt="Write girl"
-                width="600"
-                height="450" />
-                </div>
+              <div className="bigPosts__link--img">
+                <Image
+                  src="/imgs/tv.jpg"
+                  alt="Write girl"
+                  width="650"
+                  height="450" />
+              </div>
               <div className="bigPosts__link--content">
                 <h4 className="bigPosts__link--content__date">{todayDate}</h4>
                 <h2 className="bigPosts__link--content__header">{posts[1].title}</h2>
@@ -102,13 +93,13 @@ export default function BigPost({ posts }) {
             query: { post: posts[2].id }
           }}>
             <a className="bigPosts__link">
-            <div className="bigPosts__link--img">
-              <Image
-                src="/imgs/tablet.jpg"
-                alt="Write girl"
-                width="600"
-                height="450" />
-                </div>
+              <div className="bigPosts__link--img">
+                <Image
+                  src="/imgs/tablet.jpg"
+                  alt="Write girl"
+                  width="650"
+                  height="450" />
+              </div>
               <div className="bigPosts__link--content">
                 <h4 className="bigPosts__link--content__date">{todayDate}</h4>
                 <h2 className="bigPosts__link--content__header">{posts[2].title}</h2>
@@ -127,7 +118,7 @@ export default function BigPost({ posts }) {
                 <Image
                   src="/imgs/presentation.jpg"
                   alt="Write girl"
-                  width="600"
+                  width="650"
                   height="450" />
               </div>
               <div className="bigPosts__link--content">
