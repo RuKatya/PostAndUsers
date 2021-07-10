@@ -1,0 +1,115 @@
+.post {
+    margin: 5% 10%;
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+
+        &--info {
+            padding: 10%;
+            align-self: center;
+
+
+            &__date {
+                position: absolute;
+                top: 10%;
+                left: 90%;
+            }
+
+            &__header {
+                font-size: 2.5rem;
+            }
+
+            &__parag {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.comments {
+    margin: 3% 0%;
+
+    &__content {
+
+        &--info {
+            // border-bottom: 1px solid grey;
+            margin: 2% 0;
+            padding-bottom: 1%;
+            display: grid;
+            padding: 1% 2%;
+            // grid-template-rows: repeat(2, 1fr);
+
+            &:nth-child(odd) {
+                background-color: rgba(106, 232, 248, 0.4);
+            }
+
+            &:nth-child(even) {
+                background-color: rgba(100, 194, 248, 0.4);
+            }
+
+            &__name,
+            &__email {
+                font-size: 1.1rem;
+            }
+
+            &__span {
+                font-weight: bold;
+            }
+
+            &__text {
+                font-size: 1.3rem;
+            }
+
+            // &__date {
+            //     // grid-column-start: 1;
+            //     // grid-column-end: 3;
+            //     // justify-self: end;
+            // }
+        }
+    }
+}
+
+//Form style
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#name,
+#email {
+    padding: 1.5% 2%;
+    margin: 1% 0.5%;
+    border-radius: 0.4rem;
+    border: 1px solid grey;
+
+    &::placeholder {
+        font-size: 1.2rem;
+        font-family: 'Cairo', sans-serif;
+    }
+}
+
+#comment {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0.5% 1%;
+    margin: 1% 0.3%;
+    border-radius: 0.4rem;
+    height: 10vh;
+
+    &::placeholder {
+        font-size: 1.2rem;
+        font-family: 'Cairo', sans-serif;
+    }
+}
+
+#submit {
+    border-radius: 0.4rem;
+    padding: 0.3% 0%;
+    margin: 0.5% 0.5%;
+    font-size: 1.2rem;
+    width: 25%;
+    border: 1px solid black;
+    font-family: 'Cairo', sans-serif;
+}

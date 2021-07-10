@@ -8,7 +8,6 @@ export default function ManyPosts({ posts }) {
 
     return (
         <div className="manyPosts">
-            {/* <h2 className="manyPosts__header">Uploaded posts</h2> */}
             <div className="manyPosts__display">
 
                 <div className="manyPosts__display--link">

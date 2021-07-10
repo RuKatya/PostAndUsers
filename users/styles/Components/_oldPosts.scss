@@ -8,6 +8,7 @@
     &__header {
         width: 30%;
         padding: 4% 10%;
+        // font-weight: bold;
     }
 
     &__display {
@@ -18,7 +19,11 @@
         &--content {
             border-bottom: 1px solid grey;
 
-            padding: 3% 2%;
+            padding: 2% 2%;
+
+            &>a>h2 {
+                margin: 0;
+            }
         }
 
         &--user {
@@ -26,6 +31,10 @@
             // left: 35%;
             top: 20%;
             text-align: right;
+
+            &>h5 {
+                margin: 0;
+            }
         }
     }
 }

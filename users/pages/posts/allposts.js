@@ -3,15 +3,13 @@ import MainLayout from "../../components/mainLayout"
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 export default function AllPosts({ posts }) {
-    const [showMore, setShowMore] = useState(10);
+    const [showMore, setShowMore] = useState(9);
 
     function handleClick() {
-        setShowMore(showMore + 10)
+        setShowMore(showMore + 9)
     }
 
-    // const numberOfItems = showMore
     console.log(showMore)
     return (
         <MainLayout title={`All posts`} >
@@ -31,23 +29,20 @@ export default function AllPosts({ posts }) {
                                             width="500"
                                             height="300" />
                                     </div>
-                                    <div>
-                                        {post.title}
+                                    <div className="allPosts__links--header">
+                                        <h2>{post.title}</h2>
                                     </div>
-
                                 </a>
                             </Link>
                         </div>
                     )
                 })}
 
-
-
             </div>
             {
                 showMore < 100 ?
-                    <button onClick={() => handleClick()}>Show more</button> :
-                    <div>No more posts</div>
+                    <button className="showMorebtn" onClick={handleClick}>Show more</button> :
+                    <h2 className="noMorebtn">No more posts</h2>
             }
         </MainLayout>
     );

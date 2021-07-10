@@ -1,23 +1,20 @@
 .manyPosts {
-    margin: 5% 0%;
+    // margin: 5% 0%;
     padding: 2%;
     width: 100%;
-    background-color: rgba(231, 229, 229, 0.89);
-
-    &__header {
-        margin: 2% 10%;
-    }
+    background-color: rgba(251, 240, 189, 0.4);
 
     &__display {
         width: 80%;
-        margin: 0% 10%;
+        margin: 0% 8.5%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 5vw;
         row-gap: 7vh;
 
         &--link {
-            border: 1px solid rgba(219, 219, 219, 0.746);
+            border: 1px solid rgba(219, 219, 219, 0.7);
+            background-color: rgba(250, 180, 100, 0.3);
         }
 
         &--content {
@@ -30,6 +27,10 @@
         display: flex;
         flex-direction: column;
         padding: 5%;
+
+        &--header {
+            font-size: 1.3rem;
+        }
 
         &--date {
             position: relative;

@@ -5,7 +5,7 @@ export default function OldPosts({ posts, users }) {
     // console.log(users)
     return (
         <div className="oldPosts">
-            <h2 className="oldPosts__header">Old POSTS</h2>
+            <h2 className="oldPosts__header">Old posts</h2>
             <div className="oldPosts__display">
 
                 {/* First post */}

@@ -24,7 +24,7 @@ export default function MainLayout({ children, title = 'Posts' }) {
                     <Link href="/posts/allposts">
                         <a
                             className="navBar__link"
-                            style={{ borderBottom: title === `All posts` ? "1px solid black" : "none" }}
+                            style={{ borderBottom: title === `All posts` ? "1px solid blue" : "none" }}
                         >Posts </a>
                     </Link>
 
@@ -32,7 +32,7 @@ export default function MainLayout({ children, title = 'Posts' }) {
                     <Link href="/">
                         <a
                             className="navBar__link"
-                            style={{ borderBottom: title === `All users` ? "1px solid black" : "none" }}
+                            style={{ borderBottom: title === `All users` ? "1px solid green" : "none" }}
                         >Users</a>
                     </Link>
                 </div>

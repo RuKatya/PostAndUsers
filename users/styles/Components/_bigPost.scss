@@ -6,7 +6,7 @@
         position: absolute;
         background-color: rgba(219, 215, 215, 0.5);
         padding: 4% 0.5%;
-        top: 32%;
+        top: 40%;
 
         &:hover {
             background-color: rgba(219, 215, 215, 0.750);
@@ -22,11 +22,11 @@
         left: -2.5%;
     }
 
-    &__header {
-        margin: 2% 2%;
-        color: rgb(255, 96, 4);
-        font-size: 2.5rem;
-    }
+    // &__header {
+    //     margin: 2% 2%;
+    //     color: rgb(255, 96, 4);
+    //     font-size: 2.5rem;
+    // }
 
     &__slider {
         padding: 0;
@@ -40,19 +40,17 @@
         align-items: center;
 
         &--img {
-            padding: 0% 1%;
+            padding: 0% 0.5%;
         }
 
         &--content {
             position: absolute;
             display: flex;
             flex-direction: column;
-            // top: 30%;
             left: 55%;
             width: 45%;
-            padding: 15% 3%;
-            // border: 1px solid burlywood;
-            background-color: rgba(219, 215, 215, 0.5);
+            padding: 5% 3%;
+            background-color: rgba(251, 196, 175, 0.2);
 
             &__header {
                 font-size: 3rem;
