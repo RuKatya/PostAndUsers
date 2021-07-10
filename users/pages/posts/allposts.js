@@ -32,9 +32,9 @@ export default function AllPosts({ posts }) {
     const numberOfItems = showMore ? list.length : 10
     return (
         <div>
-            {list.slice(0, numberOfItems).map((item) => {
+            {list.slice(0, numberOfItems).map((item, index) => {
                 return (
-                    <div>{item}</div>
+                    <div key={index}>{item}</div>
                 )
             })}
             <button onClick={() => handleClick()}>Show more</button>
