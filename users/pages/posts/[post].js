@@ -60,7 +60,7 @@ export default function Post({ post, comments }) {
           <div className="comments__content">
 
             {Allcomments.map((comment) => (
-              <div className="comments__content--info">
+              <div className="comments__content--info" key={comment.id}>
                 <div className="comments__content--info__name"><span className="comments__content--info__span">Name: </span>{comment.name}</div>
                 <div className="comments__content--info__email"><span className="comments__content--info__span">E-mail: </span>{comment.email}</div>
                 <div className="comments__content--info__text"> {comment.body}</div>
