@@ -9,7 +9,7 @@ export default function User({ user }) {
             {/* <div>user {query.id}</div> */}
             <div>Title of user {user.name}</div>
             {/* {console.log(`query ${query}`)} */}
-            {console.log(`dafuck`, user.name)}
+            {/* {console.log(`dafuck`, user.name)} */}
         </div>
     )
 }

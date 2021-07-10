@@ -9,7 +9,7 @@ export default function BigPost({ posts }) {
   //Date
   const date = new Date();
   const todayDate = date.toLocaleTimeString()
-  console.log(todayDate)
+  // console.log(todayDate)
 
   //Arrows
   const NextArrow = ({ onClick }) => {

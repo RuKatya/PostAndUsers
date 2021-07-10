@@ -1,0 +1,16 @@
+.allPosts {
+    width: 80%;
+    margin: 3% 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        margin: 10%;
+
+        &--img {
+            width: 100%;
+        }
+    }
+}
