@@ -1,6 +1,6 @@
 .oldPosts {
-    background-color: brown;
-    width: 80%;
+    // background-color: brown;
+    width: 75%;
     margin: 5% 10%;
     display: flex;
     flex-direction: row;
@@ -19,6 +19,13 @@
             border-bottom: 1px solid grey;
 
             padding: 3% 2%;
+        }
+
+        &--user {
+            position: relative;
+            // left: 35%;
+            top: 20%;
+            text-align: right;
         }
     }
 }

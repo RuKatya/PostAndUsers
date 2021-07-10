@@ -1,8 +1,16 @@
 .manyPosts {
-    margin: 5% 10%;
-    width: 80%;
+    margin: 5% 0%;
+    padding: 2%;
+    width: 100%;
+    background-color: rgba(231, 229, 229, 0.89);
+
+    &__header {
+        margin: 2% 10%;
+    }
 
     &__display {
+        width: 80%;
+        margin: 0% 10%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 5vw;

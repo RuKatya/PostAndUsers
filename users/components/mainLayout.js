@@ -4,11 +4,6 @@ import Link from 'next/link'
 import { useState } from 'react'
 
 export default function MainLayout({ children, title = 'Posts' }) {
-    const [active, setActive] = useState('Home page')
-
-    function isActive(activebtn){
-        setActive(`${activebtn}`) 
-    }
     return (
         <>
             <Head>
@@ -17,33 +12,30 @@ export default function MainLayout({ children, title = 'Posts' }) {
 
             </Head>
             <div className="navBar">
-                <span >
+                <div className="navBar__leftSide">
                     <Link href="/">
                         <a
                             className="navBar__link navBar__homeBtn"
-                            onClick={()=>isActive(`Home page`)}
-                            // style={{ borderBottom: active === `Home page` ? "1px solid black" : "none" }}
-                        >Home page</a>
+                        >Home</a>
+                    </Link>
+                </div>
+
+                <div className="navBar__rightSide">
+                    <Link href="/posts/allposts">
+                        <a
+                            className="navBar__link"
+                            style={{ borderBottom: title === `All posts` ? "1px solid black" : "none" }}
+                        >Posts </a>
                     </Link>
 
-                    {' '}
+
                     <Link href="/">
                         <a
                             className="navBar__link"
-                            onClick={() =>  isActive(`All posts`) }
-                            style={{ borderBottom: active === `All posts` ? "1px solid black" : "none" }}
-                        >All posts </a>
+                            style={{ borderBottom: title === `All users` ? "1px solid black" : "none" }}
+                        >Users</a>
                     </Link>
-
-                    {' '}
-                    <Link href="/">
-                        <a
-                            className="navBar__link"
-                            onClick={() =>  isActive(`All users`) }
-                            style={{ borderBottom: active === `All users` ? "1px solid black" : "none" }}
-                        >All users</a>
-                    </Link>
-                </span>
+                </div>
 
             </div>
 
