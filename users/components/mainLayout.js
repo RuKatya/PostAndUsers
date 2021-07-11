@@ -21,18 +21,18 @@ export default function MainLayout({ children, title = 'Posts' }) {
                 </div>
 
                 <div className="navBar__rightSide">
-                    <Link href="/posts/allposts">
+                    <Link href="/posts">
                         <a
                             className="navBar__link"
-                            style={{ borderBottom: title === `All posts` ? "1px solid blue" : "none" }}
+                            style={{ borderBottom: title === `Posts` ? "1px solid blue" : "none" }}
                         >Posts </a>
                     </Link>
 
 
-                    <Link href="/users/allUsers">
+                    <Link href="/users">
                         <a
                             className="navBar__link"
-                            style={{ borderBottom: title === `All users` ? "1px solid purple" : "none" }}
+                            style={{ borderBottom: title === `Users` ? "1px solid purple" : "none" }}
                         >Users</a>
                     </Link>
                 </div>

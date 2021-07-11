@@ -12,7 +12,7 @@ export default function AllPosts({ posts }) {
 
     console.log(showMore)
     return (
-        <MainLayout title={`All posts`} >
+        <MainLayout title={`Posts`} >
             <div className="allPosts">
                 {posts.slice(0, showMore).map((post) => {
                     return (

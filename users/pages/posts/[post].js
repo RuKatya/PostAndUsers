@@ -39,7 +39,7 @@ export default function Post({ post, comments }) {
 
   console.log(Allcomments)
   return (
-    <MainLayout title={`Post`} >
+    <MainLayout title={post.title} >
       <div className="post">
         <div className="post__content">
           <div>

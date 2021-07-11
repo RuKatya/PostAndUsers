@@ -5,21 +5,23 @@ import React from 'react'
 import { Card, Icon } from 'semantic-ui-react'
 
 export default function Post({ users }) {
-    const random = Math.floor(Math.random() * 10)
-    // function random() {
-    //     Math.floor(Math.random() * 5)
-    // }
 
-    console.log(random)
     const extra = (
-        <a>
-            <Icon name='user' />
-            {random} Friends
-        </a>
+        <Link href=''
+        // {{
+        //     pathname: '/[friends]',
+        //     query: {friend: friend.id}
+        //     }}
+            >
+            <a>
+                <Icon name='user' />
+                Friends
+            </a>
+        </Link>
     )
 
     return (
-        <MainLayout title={`All users`} >
+        <MainLayout title={`Users`} >
             <div className="allUsers">
                 {users.map((user) => (
                     <Link href={{
@@ -30,7 +32,7 @@ export default function Post({ users }) {
                             <Card
                                 image='/imgs/tv.jpg'
                                 header={user.name}
-                                meta='Friend'
+                                // meta='Friend'
                                 description={user.username}
                                 extra={extra}
                             />
