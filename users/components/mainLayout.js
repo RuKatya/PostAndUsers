@@ -29,10 +29,10 @@ export default function MainLayout({ children, title = 'Posts' }) {
                     </Link>
 
 
-                    <Link href="/">
+                    <Link href="/users/allUsers">
                         <a
                             className="navBar__link"
-                            style={{ borderBottom: title === `All users` ? "1px solid green" : "none" }}
+                            style={{ borderBottom: title === `All users` ? "1px solid purple" : "none" }}
                         >Users</a>
                     </Link>
                 </div>

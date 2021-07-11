@@ -5,6 +5,9 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+@import 'semantic-ui-css/semantic.min.css';
+
+
 //Components
 @import './Components/navBar';
 @import './Components/bigPost';
@@ -13,8 +16,12 @@
 @import './Components/footer';
 
 //Pages
-@import './pages/allPosts';
-@import './pages/post';
+//Posts
+@import './pages/posts/allPosts';
+@import './pages/posts/post';
+
+//Users
+@import './pages/users/_allUsers';
 
 html,
 body {
