@@ -1,25 +1,9 @@
 import MainLayout from "../../components/mainLayout"
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Card, Icon } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 export default function Post({ users }) {
-
-    const extra = (
-        <Link href=''
-        // {{
-        //     pathname: '/[friends]',
-        //     query: {friend: friend.id}
-        //     }}
-            >
-            <a>
-                <Icon name='user' />
-                Friends
-            </a>
-        </Link>
-    )
-
     return (
         <MainLayout title={`Users`} >
             <div className="allUsers">
@@ -34,7 +18,7 @@ export default function Post({ users }) {
                                 header={user.name}
                                 // meta='Friend'
                                 description={user.username}
-                                extra={extra}
+                                extra={user.address.city}
                             />
                         </a>
                     </Link>
