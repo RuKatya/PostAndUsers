@@ -1,9 +1,18 @@
 // import { useRouter } from 'next/router';
 
+import { useState } from "react"
 import MainLayout from "../../components/mainLayout"
 
 export default function User({ user }) {
-    // const {query} = useRouter();
+    const [showCountry, setShowCountry] = useState(false)
+    const [showGeo, setShowGeo] = useState(false)
+
+    function hendleShowCountry() {
+        setShowCountry(!showCountry)
+    }
+    function hendleShowGeo() {
+        setShowGeo(!showGeo)
+    }
 
     return (
         <MainLayout title={user.name}>
@@ -13,20 +22,40 @@ export default function User({ user }) {
                 <div><label>E-mail: </label>{user.email}</div>
                 <div> <label>Phone number: </label>{user.phone}</div>
                 <div> <label>Web-site: </label>{user.website}</div>
+
+                {/* Country info */}
                 <div>
-                    <div> <label>Steet: </label>{user.address.street}</div>
-                    <div> <label>Suite: </label>{user.address.suite}</div>
                     <div> <label>City: </label>{user.address.city}</div>
-                    <div> <label>Zip code: </label>{user.address.zipcode}</div>
-                    <div><label>Geo </label>
-                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div>
-                        {/* <div>{user.address.geo.lng}</div> */}
-                    </div>
+                    <button onClick={hendleShowCountry}>Show more living</button>
+                    {showCountry ?
+                        <div>
+                            <div> <label>Steet: </label>{user.address.street}</div>
+                            <div> <label>Suite: </label>{user.address.suite}</div>
+                            <div> <label>Zip code: </label>{user.address.zipcode}</div>
+                            <div>
+                                <button onClick={hendleShowGeo}>Show Geo</button>
+                                {showGeo ?
+                                    <div>
+                                        <label>Geo </label>
+                                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div>
+                                    </div>
+                                    :
+                                    null}
+                            </div>
+                        </div> :
+                        null
+                    }
+
+                    {/* Geo info */}
+
                 </div>
-                <div>
-                    <div><label>Company name: </label>{user.company.name}</div>
-                    <div><label>Catch phrase: </label>{user.company.catchPhrase}</div>
-                </div>
+
+                {/* Company info */}
+                <div><label>Company name: </label>{user.company.name}</div>
+
+
+                {/* Catch phrase */}
+                <div><label>Catch phrase: </label>{user.company.catchPhrase}</div>
 
             </div>
         </MainLayout>
