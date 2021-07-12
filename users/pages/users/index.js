@@ -1,9 +1,10 @@
 import MainLayout from "../../components/mainLayout"
 import Link from 'next/link'
 import React from 'react'
-import { Card } from 'semantic-ui-react'
+import { Card, Icon, List } from 'semantic-ui-react'
 
 export default function Post({ users }) {
+
     return (
         <MainLayout title={`Users`} >
             <div className="allUsers">
@@ -18,7 +19,12 @@ export default function Post({ users }) {
                                 header={user.name}
                                 // meta='Friend'
                                 description={user.username}
-                                extra={user.address.city}
+                                extra={<List>
+                                    <List.Item
+                                        icon='mail'
+                                        content={<a href={`mailto:${user.email}`}>{user.email}</a>}
+                                    />
+                                </List>}
                             />
                         </a>
                     </Link>
