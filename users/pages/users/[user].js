@@ -6,12 +6,25 @@ import MainLayout from "../../components/mainLayout"
 export default function User({ user }) {
     const [showCountry, setShowCountry] = useState(false)
     const [showGeo, setShowGeo] = useState(false)
+    const [flag, setFlag] = useState(false)
 
     function hendleShowCountry() {
         setShowCountry(!showCountry)
+        setFlag(true)
+        console.log(showCountry)
+        console.log(flag)
+    }
+
+    function hendleCloseCountry() {
+        setFlag(false)
     }
     function hendleShowGeo() {
-        setShowGeo(!showGeo)
+        if (flag == true) {
+            setShowGeo(!showGeo)
+        } else if (flag == false) {
+            setShowGeo(false)
+        }
+
     }
 
     return (
@@ -26,12 +39,26 @@ export default function User({ user }) {
                 {/* Country info */}
                 <div>
                     <div> <label>City: </label>{user.address.city}</div>
-                    <button onClick={hendleShowCountry}>Show more living</button>
+                    {
+                        flag ?
+                            null :
+                            <button onClick={hendleShowCountry}>Show more living</button>
+                    }
+
                     {showCountry ?
                         <div>
-                            <div> <label>Steet: </label>{user.address.street}</div>
-                            <div> <label>Suite: </label>{user.address.suite}</div>
-                            <div> <label>Zip code: </label>{user.address.zipcode}</div>
+
+
+                            {flag ?
+                                <div>
+                                    <button onClick={hendleCloseCountry}>Close</button>
+                                    <div> <label>Steet: </label>{user.address.street}</div>
+                                    <div> <label>Suite: </label>{user.address.suite}</div>
+                                    <div> <label>Zip code: </label>{user.address.zipcode}</div>
+                                </div> :
+                                null
+                            }
+
                             <div>
                                 <button onClick={hendleShowGeo}>Show Geo</button>
                                 {showGeo ?
