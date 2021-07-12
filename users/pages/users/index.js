@@ -13,7 +13,7 @@ export default function Post({ users }) {
                         pathname: '/users/[user]',
                         query: { user: user.id }
                     }}>
-                        <a className="allUsers__links">
+                        <a className="allUsers__links" key={user.id}>
                             <Card
                                 image='/imgs/tv.jpg'
                                 header={user.name}
