@@ -6,7 +6,7 @@ import OldPosts from "../components/HomePage/oldPosts"
 export default function Home({ posts, users }) {
   // console.log(users)
   return (
-    <MainLayout title={`Home page`} >
+    <MainLayout title={`Users`} >
       <div className="homePage">
         {/* Main posts */}
         <BigPost posts={posts} />

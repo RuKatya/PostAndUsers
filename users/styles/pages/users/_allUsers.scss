@@ -1,16 +1,21 @@
 .allUsers {
     width: 80%;
-        margin: 3% 10%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+    margin: 0% 10%;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
-    &__list {
-        
-        
+    &__links {
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 8%;
+        padding: 3%;
 
-        &--links {
-            margin: 2.5%;
+        &--content {
+            &__mail {
+                border-top: 1px solid rgb(207, 206, 206);
+                padding-top: 3%;
+                font-size: 1.1rem;
+            }
         }
     }
 }

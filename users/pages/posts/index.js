@@ -13,37 +13,39 @@ export default function AllPosts({ posts }) {
     console.log(showMore)
     return (
         <MainLayout title={`Posts`} >
-            <div className="allPosts">
-                {posts.slice(0, showMore).map((post) => {
-                    return (
-                        <div key={post.id}>
-                            <Link href={{
-                                pathname: '/posts/[post]',
-                                query: { post: post.id }
-                            }}>
-                                <a className="allPosts__links">
-                                    <div className="allPosts__links--img">
-                                        <Image
-                                            src="/imgs/writeGirl.jpg"
-                                            alt="Write women"
-                                            width="500"
-                                            height="300" />
-                                    </div>
-                                    <div className="allPosts__links--header">
-                                        <h2>{post.title}</h2>
-                                    </div>
-                                </a>
-                            </Link>
-                        </div>
-                    )
-                })}
+            <div className="mainPostsUsers">
+                <div className="allPosts">
+                    {posts.slice(0, showMore).map((post) => {
+                        return (
+                            <div key={post.id}>
+                                <Link href={{
+                                    pathname: '/posts/[post]',
+                                    query: { post: post.id }
+                                }}>
+                                    <a className="allPosts__links">
+                                        <div className="allPosts__links--img">
+                                            <Image
+                                                src="/imgs/writeGirl.jpg"
+                                                alt="Write women"
+                                                width="500"
+                                                height="300" />
+                                        </div>
+                                        <div className="allPosts__links--header">
+                                            <h2>{post.title}</h2>
+                                        </div>
+                                    </a>
+                                </Link>
+                            </div>
+                        )
+                    })}
 
+                </div>
+                {
+                    showMore < 100 ?
+                        <button className="showMorebtn" onClick={handleClick}>Show more</button> :
+                        <h2 className="noMorebtn">No more posts</h2>
+                }
             </div>
-            {
-                showMore < 100 ?
-                    <button className="showMorebtn" onClick={handleClick}>Show more</button> :
-                    <h2 className="noMorebtn">No more posts</h2>
-            }
         </MainLayout>
     );
 }

@@ -32,48 +32,50 @@ export default function User({ user }) {
 
     return (
         <MainLayout title={user.name}>
-            <div className="userPage">
-                <div className="userPage__info">
-                    <h1>{user.name}</h1>
-                    <Image
-                        src="/imgs/writeGirl.jpg"
-                        alt="Write women"
-                        width="500"
-                        height="300" />
-                    <div> <label>Username: </label>{user.username}</div>
-                    <div><label>E-mail: </label>{user.email}</div>
-                    <div> <label>Phone number: </label>{user.phone}</div>
-                    <div> <label>Web-site: </label>{user.website}</div>
-                    <label>Living</label>
-                    <div> <label>City: </label>{user.address.city}</div>
+            <div className="mainPostsUsers">
+                <div className="userPage">
+                    <div className="userPage__info">
+                        <h1>{user.name}</h1>
+                        <Image
+                            src="/imgs/writeGirl.jpg"
+                            alt="Write women"
+                            width="500"
+                            height="300" />
+                        <div> <label>Username: </label>{user.username}</div>
+                        <div><label>E-mail: </label>{user.email}</div>
+                        <div> <label>Phone number: </label>{user.phone}</div>
+                        <div> <label>Web-site: </label>{user.website}</div>
+                        <label>Living</label>
+                        <div> <label>City: </label>{user.address.city}</div>
 
-                    <label>Geo </label>
+                        <label>Geo </label>
 
 
-                    <div><label>Company name: </label>{user.company.name}</div>
+                        <div><label>Company name: </label>{user.company.name}</div>
 
-                    <div><label>Catch phrase: </label>{user.company.catchPhrase}</div>
+                        <div><label>Catch phrase: </label>{user.company.catchPhrase}</div>
+                    </div>
+
+                    {
+                        flag ?
+                            <div>
+                                <button onClick={hendleCloseCountry}>Close</button>
+                                <div> <label>Steet: </label>{user.address.street}</div>
+                                <div> <label>Suite: </label>{user.address.suite}</div>
+                                <div> <label>Zip code: </label>{user.address.zipcode}</div>
+                                <button onClick={hendleShowGeo}>Geo</button>
+                                {
+                                    showGeo ?
+                                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div> :
+                                        null
+                                }
+                            </div>
+                            :
+                            <div>
+                                <button onClick={hendleShowCountry}>Show more living</button>
+                            </div>
+                    }
                 </div>
-
-                {
-                    flag ?
-                        <div>
-                            <button onClick={hendleCloseCountry}>Close</button>
-                            <div> <label>Steet: </label>{user.address.street}</div>
-                            <div> <label>Suite: </label>{user.address.suite}</div>
-                            <div> <label>Zip code: </label>{user.address.zipcode}</div>
-                            <button onClick={hendleShowGeo}>Geo</button>
-                            {
-                                showGeo ?
-                                    <div>{user.address.geo.lat}, {user.address.geo.lng}</div> :
-                                    null
-                            }
-                        </div>
-                        :
-                        <div>
-                            <button onClick={hendleShowCountry}>Show more living</button>
-                        </div>
-                }
             </div>
         </MainLayout >
     )

@@ -1,25 +1,25 @@
 .manyPosts {
-    // margin: 5% 0%;
     padding: 2%;
     width: 100%;
     background-color: #e5e5dc;
-    // #f6ead4;
-
-
 
     &__display {
         width: 80%;
         margin: 3% 8.5%;
-        // padding: 2%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 5vw;
         row-gap: 7vh;
 
         &--link {
-            // border: 1px solid rgba(219, 219, 219, 0.7);
             background-color: rgba(255, 255, 255, 0.5);
             padding: 2%;
+
+            &:hover {
+                background-color: rgba(90, 190, 230, 0.5);
+                transition: all 0.2s;
+                // color: white;
+            }
         }
 
         &--content {

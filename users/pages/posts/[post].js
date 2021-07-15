@@ -40,64 +40,67 @@ export default function Post({ post, comments }) {
   console.log(Allcomments)
   return (
     <MainLayout title={post.title} >
-      <div className="post">
-        <div className="post__content">
-          <div>
-            <Image
-              src="/imgs/writeGirl.jpg"
-              alt="Write girl"
-              width="1000"
-              height="670" />
+      <div className="mainPostsUsers">
+        <div className="post">
+          <div className="post__content">
+            <div>
+              <Image
+                src="/imgs/writeGirl.jpg"
+                alt="Write girl"
+                width="1000"
+                height="670" />
+            </div>
+            <div className="post__content--info">
+              <h1 className="post__content--info__header">{post.title}</h1>
+              <p className="post__content--info__parag">{post.body}</p>
+            </div>
           </div>
-          <div className="post__content--info">
-            <h1 className="post__content--info__header">{post.title}</h1>
-            <p className="post__content--info__parag">{post.body}</p>
+
+          {/* All comments of users */}
+          <div className="comments">
+            <h2>Comments</h2>
+            <div className="comments__content">
+
+              {Allcomments.map((comment) => (
+                <div className="comments__content--info" key={comment.id}>
+                  <div className="comments__content--info__name"><span className="comments__content--info__span">Name: </span>{comment.name}</div>
+                  <div className="comments__content--info__email"><span className="comments__content--info__span">E-mail: </span>{comment.email}</div>
+                  <div className="comments__content--info__text"> {comment.body}</div>
+                  <div className="comments__content--info__date">{comment.date}</div>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Form of comments */}
+          <form onSubmit={hendlemessege}>
+            <input
+              id="name"
+              type='text'
+              placeholder='Name'
+              name='name'
+              required
+            />
+            <input
+              id="email"
+              type='text'
+              placeholder='E-mail'
+              name='email'
+              required
+            />
+            <textarea
+              id="comment"
+              name='comment'
+              placeholder='Write comment'
+            />
+            <input
+              id="submit"
+              type='submit'
+              value='Send'
+              className="sendBtn"
+            />
+          </form>
         </div>
-
-        {/* All comments of users */}
-        <div className="comments">
-          <h2>Comments</h2>
-          <div className="comments__content">
-
-            {Allcomments.map((comment) => (
-              <div className="comments__content--info" key={comment.id}>
-                <div className="comments__content--info__name"><span className="comments__content--info__span">Name: </span>{comment.name}</div>
-                <div className="comments__content--info__email"><span className="comments__content--info__span">E-mail: </span>{comment.email}</div>
-                <div className="comments__content--info__text"> {comment.body}</div>
-                <div className="comments__content--info__date">{comment.date}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Form of comments */}
-        <form onSubmit={hendlemessege}>
-          <input
-            id="name"
-            type='text'
-            placeholder='Name'
-            name='name'
-            required
-          />
-          <input
-            id="email"
-            type='text'
-            placeholder='E-mail'
-            name='email'
-            required
-          />
-          <textarea
-            id="comment"
-            name='comment'
-            placeholder='Write comment'
-          />
-          <input
-            id="submit"
-            type='submit'
-            value='Send'
-          />
-        </form>
       </div>
     </MainLayout>
   )
