@@ -16,7 +16,6 @@ export default function MainLayout({ children, title = 'Posts' }) {
                     <Link href="/">
                         <a
                             className="navBar__link navBar__homeBtn"
-                        // style={{ color: title === `Home page` ? "white" : "rgb(175, 219, 255)" }}
                         >Home</a>
                     </Link>
                 </div>
