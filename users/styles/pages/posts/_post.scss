@@ -1,3 +1,7 @@
+.mainPosts {
+    background: linear-gradient(90deg, rgba(229, 229, 220, 1) 72%, rgba(25, 120, 165, 1) 72%);
+}
+
 .post {
     margin: $marginPages;
     padding: $paddingPages;
@@ -6,6 +10,8 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         position: relative;
+        background-color: rgba(255, 255, 255);
+        padding: 1%;
 
         &--info {
             padding: 10%;
@@ -31,6 +37,17 @@
 
 .comments {
     margin: 3% 0%;
+    line-height: 2rem;
+
+    &>h2 {
+        background-color: $greenBackground;
+        width: 130%;
+        position: relative;
+        left: -15%;
+        text-align: center;
+        padding: 1% 0%;
+        // margin: 0% 5%;
+    }
 
     &__content {
 
@@ -41,11 +58,11 @@
             padding: 1% 2%;
 
             &:nth-child(odd) {
-                background-color: rgba(106, 232, 248, 0.4);
+                background-color: rgba(106, 232, 248);
             }
 
             &:nth-child(even) {
-                background-color: rgba(100, 194, 248, 0.4);
+                background-color: rgba(100, 194, 248);
             }
 
             &__name,

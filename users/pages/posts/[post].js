@@ -40,7 +40,7 @@ export default function Post({ post, comments }) {
   console.log(Allcomments)
   return (
     <MainLayout title={post.title} >
-      <div className="mainPostsUsers">
+      <div className="mainPosts">
         <div className="post">
           <div className="post__content">
             <div>
@@ -58,7 +58,7 @@ export default function Post({ post, comments }) {
 
           {/* All comments of users */}
           <div className="comments">
-            <h2>Comments</h2>
+            <h2 className="comments__header">Comments</h2>
             <div className="comments__content">
 
               {Allcomments.map((comment) => (
