@@ -25,7 +25,7 @@ export default function AllPosts({ posts }) {
                                     <a className="allPosts__links">
                                         <div className="allPosts__links--img">
                                             <Image
-                                                src="/imgs/writeGirl.jpg"
+                                                src="/imgs/post/post.jpg"
                                                 alt="Write women"
                                                 width="500"
                                                 height="300" />

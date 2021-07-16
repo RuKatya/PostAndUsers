@@ -49,7 +49,7 @@ export default function User({ user, posts }) {
 
                         <div>
                             <Image
-                                src="/imgs/writeGirl.jpg"
+                                src="/imgs/user/user.jpg"
                                 alt="Write women"
                                 width="800"
                                 height="500" />

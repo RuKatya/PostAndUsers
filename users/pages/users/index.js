@@ -19,7 +19,7 @@ export default function Post({ users }) {
                             <a className="allUsers__links" >
                                 <div className="allUsers__links--img">
                                     <Image
-                                        src="/imgs/tv.jpg"
+                                        src="/imgs/user/user.jpg"
                                         alt="TV"
                                         width="500"
                                         height="300" />
