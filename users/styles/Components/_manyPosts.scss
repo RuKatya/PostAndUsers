@@ -1,24 +1,23 @@
 .manyPosts {
-    padding: 2%;
+    padding: $paddingPages;
     width: 100%;
-    background-color: #e5e5dc;
+    background-color: $creamBackground;
 
     &__display {
-        width: 80%;
-        margin: 3% 8.5%;
+        width: $widthPages;
+        margin: $marginPages;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: $repeatGrid;
         column-gap: 5vw;
         row-gap: 7vh;
 
         &--link {
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: $whiteTransparentBackground;
             padding: 2%;
 
             &:hover {
-                background-color: rgba(90, 190, 230, 0.5);
-                transition: all 0.2s;
-                // color: white;
+                background-color: $hoverBackground;
+                transition: $transition;
             }
         }
 

@@ -30,12 +30,10 @@
     &__link {
         margin: 0% 2%;
         padding: 1% 1.5%;
-        // color: white;
 
         &:hover {
-            // background-color: rgba(224, 220, 220, 0.3);
             color: white;
-            transition: all 0.1s;
+            transition: $transition;
         }
     }
 }

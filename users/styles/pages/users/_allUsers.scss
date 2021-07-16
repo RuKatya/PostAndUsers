@@ -1,18 +1,23 @@
 .allUsers {
-    width: 80%;
-    margin: 0% 10%;
-    padding: 3%;
+    width: $widthPages;
+    margin: $marginPages;
+    padding: $paddingPages;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: $repeatGrid;
 
     &__links {
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 8%;
-        padding: 3%;
+        background-color: $whiteTransparentBackground;
+        margin: $marginLinks;
+        padding: $paddingLinks;
+
+        &:hover {
+            background-color: $hoverBackground;
+            transition: $transition;
+        }
 
         &--content {
             &__mail {
-                border-top: 1px solid rgb(207, 206, 206);
+                border-top: $border rgb(207, 206, 206);
                 padding-top: 3%;
                 font-size: 1.1rem;
             }

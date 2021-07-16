@@ -1,0 +1,38 @@
+//Font
+$fontFamily: 'Cairo',
+sans-serif;
+
+//Nav bar + footer
+$color-nav-footer: #1fbfb8;
+
+//BackgroundColor
+$creamBackground: #e5e5dc;
+$whiteTransparentBackground: rgb(255, 255, 255, 0.5);
+$hoverBackground:rgba(90, 190, 230, 0.5);
+
+//Margin
+$marginPages: 0% 10%;
+$marginLinks:8%;
+
+//Padding
+$paddingPages:5% 0%;
+$paddingLinks: 3%;
+
+//Width
+$widthPages: 80%;
+
+//Border
+$border: 1px solid;
+$borderRadius: 0.4rem;
+
+//Colors
+$grey: grey;
+
+//Grid
+$repeatGrid: repeat(3, 1fr);
+
+//Transition
+$transition: all 0.2s;
+
+//Alegn items
+$align: center;

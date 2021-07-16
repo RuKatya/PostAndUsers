@@ -1,23 +1,23 @@
 .allPosts {
-    width: 80%;
-    margin: 0% 10%;
-    padding: 2% 0%;
+    width: $widthPages;
+    margin: $marginPages;
+    padding: $paddingPages;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: $repeatGrid;
 
 
     &__links {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: $whiteTransparentBackground;
         display: flex;
         flex-direction: column;
-        margin: 8%;
-        padding: 3%;
+        margin: $marginLinks;
+        padding: $paddingLinks;
         height: 40vh;
-        text-align: center;
+        text-align: $align;
 
         &:hover {
-            background-color: rgba(90, 190, 230, 0.5);
-            transition: all 0.2s;
+            background-color: $hoverBackground;
+            transition: $transition;
         }
 
         &--img {
@@ -44,7 +44,7 @@
 
     &:hover {
         background-color: rgb(6, 84, 187);
-        transition: all 0.2s;
+        transition: $transition;
     }
 }
 

@@ -1,54 +1,26 @@
 .mainBigPost {
-    // background-color: #e5e5dc;
     background-image: url("../../public/background/ed-van-duijn-2uTjeMfeVEU-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 5% 0%;
+    padding: $paddingPages;
 }
 
 .bigPosts {
-    width: 80%;
-    margin: 0% 10%;
+    width: $widthPages;
+    margin: $marginPages;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 2%;
-
-    .arrow {
-        position: absolute;
-        background-color: rgba(219, 215, 215, 0.5);
-        padding: 4% 0.5%;
-        top: 40%;
-
-        &:hover {
-            background-color: rgba(219, 215, 215, 0.750);
-            transition: all 0.2s;
-        }
-    }
-
-    .next {
-        left: 100.5%;
-    }
-
-    .prev {
-        left: -2.5%;
-    }
-
-    // &__header {
-    //     margin: 2% 2%;
-    //     color: rgb(255, 96, 4);
-    //     font-size: 2.5rem;
-    // }
 
     &__slider {
         padding: 0;
         position: relative;
-
     }
 
     &__link {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: $align;
 
         &--img {
             padding: 0% 0.1%;
@@ -62,7 +34,6 @@
             left: 55%;
             width: 45%;
             padding: 5% 3%;
-            // background-color: rgba(251, 196, 175, 0.2);
 
             &__header {
                 font-size: 3rem;

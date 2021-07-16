@@ -2,10 +2,63 @@ label {
     font-weight: bold;
 }
 
-.userPage {
-    width: 80%;
-    margin: 5% 10%;
-    background-color: blue;
+.mainUser {
+    // background-color: $creamBackground;
+    // background: linear-gradient(90deg, rgba(25, 120, 165, 1) 0%, rgba(229, 229, 220, 1) 48%);
+    // background: linear-gradient(90deg, rgba(5, 113, 108, 1) 37%, rgba(229, 229, 220, 1) 37%);
+    background: linear-gradient(90deg, rgba(25, 120, 165, 1) 37%, rgba(229, 229, 220, 1) 37%);
 
-    __info {}
+}
+
+.userPage {
+    width: $widthPages;
+    margin: $marginPages;
+    padding: $paddingPages;
+
+    &__info {
+        // color: white;
+        position: relative;
+
+        &--content {
+            position: absolute;
+            top: 10%;
+            left: 60%;
+            font-size: 1.4rem;
+            line-height: 2rem;
+
+
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        &--living {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+
+    &__moreLiving {
+        position: absolute;
+        top: 83%;
+        left: 100%;
+        width: 100%;
+
+        &--btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+
+    &__company {
+        position: absolute;
+        top: 45vh;
+
+        &--title {
+            width: 180%;
+        }
+    }
 }

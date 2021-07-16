@@ -32,49 +32,67 @@ export default function User({ user }) {
 
     return (
         <MainLayout title={user.name}>
-            <div className="mainPostsUsers">
+            <div className="mainUser">
                 <div className="userPage">
                     <div className="userPage__info">
                         <h1>{user.name}</h1>
-                        <Image
-                            src="/imgs/writeGirl.jpg"
-                            alt="Write women"
-                            width="500"
-                            height="300" />
-                        <div> <label>Username: </label>{user.username}</div>
-                        <div><label>E-mail: </label>{user.email}</div>
-                        <div> <label>Phone number: </label>{user.phone}</div>
-                        <div> <label>Web-site: </label>{user.website}</div>
-                        <label>Living</label>
-                        <div> <label>City: </label>{user.address.city}</div>
 
-                        <label>Geo </label>
+                        <div>
+                            <Image
+                                src="/imgs/writeGirl.jpg"
+                                alt="Write women"
+                                width="800"
+                                height="500" />
+                        </div>
 
-
-                        <div><label>Company name: </label>{user.company.name}</div>
-
-                        <div><label>Catch phrase: </label>{user.company.catchPhrase}</div>
-                    </div>
-
-                    {
-                        flag ?
-                            <div>
-                                <button onClick={hendleCloseCountry}>Close</button>
-                                <div> <label>Steet: </label>{user.address.street}</div>
-                                <div> <label>Suite: </label>{user.address.suite}</div>
-                                <div> <label>Zip code: </label>{user.address.zipcode}</div>
-                                <button onClick={hendleShowGeo}>Geo</button>
+                        <div className="userPage__info--content">
+                            <div className="userPage__grid">
+                                <label>Username: </label><div> {user.username}</div>
+                                <label>E-mail: </label><div>{user.email}</div>
+                                <label>Phone number: </label><div> {user.phone}</div>
+                                <label>Web-site: </label><div> {user.website}</div>
+                                <label className="userPage__grid--living">Living</label>
+                                <label>City: </label>
+                                <div> {user.address.city}</div>
+                            </div>
+                            <div className="userPage__moreLiving">
                                 {
-                                    showGeo ?
-                                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div> :
-                                        null
+                                    flag ?
+                                        <div >
+                                            <button onClick={hendleCloseCountry} className="userPage__moreLiving--btn">Close</button>
+                                            <div className="userPage__grid">
+                                                <label>Steet: </label> <div> {user.address.street}</div>
+                                                <label>Suite: </label><div> {user.address.suite}</div>
+                                                <label>Zip code: </label><div> {user.address.zipcode}</div>
+                                            </div>
+
+                                            {
+                                                showGeo ?
+                                                    <div >
+                                                        <button onClick={hendleShowGeo} className="userPage__moreLiving--btn" >Close</button>
+                                                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div>
+                                                    </div>
+                                                    :
+                                                    <button onClick={hendleShowGeo} className="userPage__moreLiving--btn">Geo</button>
+                                            }
+                                        </div>
+                                        :
+                                        <div>
+                                            <button onClick={hendleShowCountry} className="userPage__moreLiving--btn">Show more living</button>
+                                        </div>
                                 }
                             </div>
-                            :
-                            <div>
-                                <button onClick={hendleShowCountry}>Show more living</button>
+
+
+                            <div className="userPage__grid userPage__company">
+                                <label>Company name: </label><div className="userPage__company--title">{user.company.name}</div>
+                                <label>Catch phrase: </label><div className="userPage__company--title">{user.company.catchPhrase}</div>
                             </div>
-                    }
+
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </MainLayout >
@@ -90,3 +108,8 @@ export async function getServerSideProps({ params }) {
         props: { user }
     }
 }
+
+
+
+
+

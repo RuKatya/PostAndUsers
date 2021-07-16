@@ -1,6 +1,6 @@
 .post {
-    margin: 0% 10%;
-    padding: 5% 0%;
+    margin: $marginPages;
+    padding: $paddingPages;
 
     &__content {
         display: grid;
@@ -9,7 +9,7 @@
 
         &--info {
             padding: 10%;
-            align-self: center;
+            align-self: $align;
 
 
             &__date {
@@ -35,12 +35,10 @@
     &__content {
 
         &--info {
-            // border-bottom: 1px solid grey;
             margin: 2% 0;
             padding-bottom: 1%;
             display: grid;
             padding: 1% 2%;
-            // grid-template-rows: repeat(2, 1fr);
 
             &:nth-child(odd) {
                 background-color: rgba(106, 232, 248, 0.4);
@@ -62,12 +60,6 @@
             &__text {
                 font-size: 1.3rem;
             }
-
-            // &__date {
-            //     // grid-column-start: 1;
-            //     // grid-column-end: 3;
-            //     // justify-self: end;
-            // }
         }
     }
 }
@@ -82,12 +74,12 @@ form {
 #email {
     padding: 1.5% 2%;
     margin: 1% 0.5%;
-    border-radius: 0.4rem;
-    border: 1px solid grey;
+    border-radius: $borderRadius;
+    border: $border $grey;
 
     &::placeholder {
         font-size: 1.2rem;
-        font-family: 'Cairo', sans-serif;
+        font-family: $fontFamily;
     }
 }
 
@@ -96,41 +88,39 @@ form {
     grid-column-end: 3;
     padding: 0.5% 1%;
     margin: 1% 0.3%;
-    border-radius: 0.4rem;
+    border-radius: $borderRadius;
     height: 10vh;
 
     &::placeholder {
         font-size: 1.2rem;
-        font-family: 'Cairo', sans-serif;
+        font-family: $fontFamily;
     }
 }
 
 #submit {
-    border-radius: 0.4rem;
+    border-radius: $borderRadius;
     padding: 0.7% 0%;
     margin: 0.5% 0.5%;
     font-size: 1.3rem;
     width: 25%;
     border: 1px solid black;
-    font-family: 'Cairo', sans-serif;
+    font-family: $fontFamily;
 }
 
 .sendBtn {
-
     position: relative;
     top: 1vh;
     left: 0.2%;
     font-size: 1.5rem;
     padding: 0.5%;
     background-color: rgb(29, 121, 241);
-
     border: none;
     cursor: pointer;
     color: white;
 
     &:hover {
         background-color: rgb(6, 84, 187);
-        transition: all 0.2s;
+        transition: $transition;
     }
 
 }

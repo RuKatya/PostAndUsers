@@ -5,8 +5,11 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
+//semantic
 @import 'semantic-ui-css/semantic.min.css';
 
+//helpers
+@import './helpers/variables';
 
 //Components
 @import './Components/navBar';
@@ -29,7 +32,7 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
-  font-family: 'Cairo', sans-serif;
+  font-family: $fontFamily;
 }
 
 a {
@@ -43,7 +46,6 @@ a {
 
 .lorem {
   background-color: #1978a5;
-  // #05716c;
 
   &Second {
     background-color: #05716c;
@@ -54,19 +56,19 @@ a {
     width: 70%;
     margin: 0 15%;
     padding: 3.5% 0;
-    text-align: center;
+    text-align: $align;
     font-size: 1.4rem;
     line-height: 2rem;
   }
 }
 
 .mainPostsUsers {
-  background-color: #e5e5dc;
+  background-color: $creamBackground;
 }
 
 
 footer {
-  background-color: #1fbfb8;
+  background-color: $color-nav-footer;
   color: white;
   height: 10vh;
 }
