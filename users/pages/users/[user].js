@@ -83,12 +83,12 @@ export default function User({ user, posts }) {
                                                         <div>{user.address.geo.lat}, {user.address.geo.lng}</div>
                                                     </div>
                                                     :
-                                                    <button onClick={hendleShowGeo} className="userPage__moreLiving--btn">Geo</button>
+                                                    <button onClick={hendleShowGeo} className="userPage__moreLiving--btn">Coordinates</button>
                                             }
                                         </div>
                                         :
                                         <div>
-                                            <button onClick={hendleShowCountry} className="userPage__moreLiving--btn">Show more living</button>
+                                            <button onClick={hendleShowCountry} className="userPage__moreLiving--btn">Show full address</button>
                                         </div>
                                 }
                             </div>

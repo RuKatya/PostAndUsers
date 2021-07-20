@@ -3,9 +3,6 @@ label {
 }
 
 .mainUser {
-    // background-color: $creamBackground;
-    // background: linear-gradient(90deg, rgba(25, 120, 165, 1) 0%, rgba(229, 229, 220, 1) 48%);
-    // background: linear-gradient(90deg, rgba(5, 113, 108, 1) 37%, rgba(229, 229, 220, 1) 37%);
     background: linear-gradient(90deg, rgba(25, 120, 165, 1) 37%, rgba(229, 229, 220, 1) 37%);
 }
 
@@ -31,8 +28,13 @@ label {
     }
 
     &__grid {
+        position: relative;
+        left: -10%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        width: 85%;
+        align-items: center;
+
 
         &--living {
             grid-column-start: 1;
@@ -41,7 +43,7 @@ label {
     }
 
     &__living {
-        width: 50%;
+        width: 35%;
 
         &--content {
             width: 300%;
@@ -51,13 +53,21 @@ label {
     &__moreLiving {
         position: absolute;
         top: 83%;
-        left: 100%;
+        left: 90%;
         width: 100%;
+
 
         &--btn {
             border: none;
             background: none;
             cursor: pointer;
+            position: relative;
+            left: -15%;
+            // background-color: blue;
+
+            &:hover {
+                border-bottom: 1px solid blue;
+            }
         }
     }
 

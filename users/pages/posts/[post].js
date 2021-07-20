@@ -23,7 +23,7 @@ export default function Post({ post, comments }) {
     const nameAdd = e.target.children.name.value;
     const emailAdd = e.target.children.email.value;
 
-    console.log(commentAdd, nameAdd, emailAdd)
+    // console.log(commentAdd, nameAdd, emailAdd)
 
     setAllComments([...Allcomments, {
       postId: query.post,
@@ -37,7 +37,7 @@ export default function Post({ post, comments }) {
     e.target.reset(); //reset of form
   }
 
-  console.log(Allcomments)
+  // console.log(Allcomments)
   return (
     <MainLayout title={post.title} >
       <div className="mainPosts">
@@ -45,7 +45,7 @@ export default function Post({ post, comments }) {
           <div className="post__content">
             <div>
               <Image
-                src="/imgs/writeGirl.jpg"
+                src="/imgs/post/post.jpg"
                 alt="Write girl"
                 width="1000"
                 height="670" />
@@ -107,14 +107,14 @@ export default function Post({ post, comments }) {
 }
 
 export async function getServerSideProps({ params }) {
-  console.log({ params })
+  // console.log({ params })
   const resPost = await fetch(`http://jsonplaceholder.typicode.com/posts/${params.post}`)
   const post = await resPost.json()
 
   const resComment = await fetch(`http://jsonplaceholder.typicode.com/posts/${params.post}/comments`)
   const comments = await resComment.json()
 
-  console.log(`comments are:`, comments)
+  // console.log(`comments are:`, comments)
   return {
     props: { post, comments }
   }
