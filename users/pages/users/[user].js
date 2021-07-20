@@ -71,7 +71,7 @@ export default function User({ user, posts }) {
                                 {
                                     flag ?
                                         <div >
-                                            <button onClick={hendleCloseCountry} className="userPage__moreLiving--btn">Close</button>
+                                            <button onClick={hendleCloseCountry} className="userPage__moreLiving--btn" style={{}}>Close</button>
                                             <div className="userPage__grid userPage__living">
                                                 <label>Steet: </label> <div className="userPage__living--content"> {user.address.street}</div>
                                                 <label>Suite: </label><div className="userPage__living--content"> {user.address.suite}</div>
@@ -81,9 +81,8 @@ export default function User({ user, posts }) {
                                             {
                                                 showGeo ?
                                                     <div >
-                                                        <button onClick={hendleShowGeo} className="userPage__moreLiving--btn" >Close</button>
                                                         <div className="userPage__moreLiving--geodata">
-                                                            <Image src="/icons/marker.png" alt="marker" width="25" height="25" />
+                                                            <label>Coordinates</label>
                                                             {user.address.geo.lat}, {user.address.geo.lng}
                                                         </div>
                                                     </div>
@@ -145,7 +144,7 @@ export default function User({ user, posts }) {
                         {
                             showMore < 10 ?
                                 <button className="showMorebtn" onClick={handleShowMore}>Show more</button> :
-                                <h2 className="noMorebtn">No more posts</h2>
+                                <h2 className="noMorebtn moreBtnUsers">No more posts</h2>
                         }
                     </div>
 

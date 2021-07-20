@@ -1,4 +1,19 @@
-// footer {
-//     // position: absolute;
-//     // bottom: 0;
-// }
+footer {
+    background-color: $color-nav-footer;
+}
+
+.footer {
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 60%;
+    margin: 0% 20%;
+    padding: 1% 0%;
+    font-size: 1.3rem;
+
+    &__flex {
+        margin: 0% 5%;
+        line-height: 3rem;
+        align-items: center;
+    }
+}

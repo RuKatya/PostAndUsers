@@ -2,6 +2,7 @@ import { bottom } from '@popperjs/core'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useState } from 'react'
+import Footer from './footer'
 
 export default function MainLayout({ children, title = 'Posts' }) {
     return (
@@ -43,9 +44,7 @@ export default function MainLayout({ children, title = 'Posts' }) {
                 {children}
             </main>
 
-            <footer>FOOTER</footer>
-
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8P72HMX3zllKeeZt8X89dJWMEu0LSX8&callback=myMap" async defer></script>
+            <Footer />
         </>
     )
 }
