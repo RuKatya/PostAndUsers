@@ -44,6 +44,8 @@ export default function MainLayout({ children, title = 'Posts' }) {
             </main>
 
             <footer>FOOTER</footer>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8P72HMX3zllKeeZt8X89dJWMEu0LSX8&callback=myMap" async defer></script>
         </>
     )
 }

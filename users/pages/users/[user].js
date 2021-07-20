@@ -8,6 +8,8 @@ import { useState } from "react"
 //Components
 import MainLayout from "../../components/mainLayout"
 
+import { Loader, LoaderOptions } from 'google-maps';
+
 export default function User({ user, posts }) {
     const [showCountry, setShowCountry] = useState(false)
     const [showGeo, setShowGeo] = useState(false)
@@ -80,7 +82,10 @@ export default function User({ user, posts }) {
                                                 showGeo ?
                                                     <div >
                                                         <button onClick={hendleShowGeo} className="userPage__moreLiving--btn" >Close</button>
-                                                        <div>{user.address.geo.lat}, {user.address.geo.lng}</div>
+                                                        <div class="userPage__moreLiving--geodata">
+                                                            <Image src="/icons/marker.png" alt="marker" width="25" height="25" />
+                                                            {user.address.geo.lat}, {user.address.geo.lng}
+                                                        </div>
                                                     </div>
                                                     :
                                                     <button onClick={hendleShowGeo} className="userPage__moreLiving--btn">Coordinates</button>
