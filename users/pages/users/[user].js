@@ -82,7 +82,7 @@ export default function User({ user, posts }) {
                                                 showGeo ?
                                                     <div >
                                                         <button onClick={hendleShowGeo} className="userPage__moreLiving--btn" >Close</button>
-                                                        <div class="userPage__moreLiving--geodata">
+                                                        <div className="userPage__moreLiving--geodata">
                                                             <Image src="/icons/marker.png" alt="marker" width="25" height="25" />
                                                             {user.address.geo.lat}, {user.address.geo.lng}
                                                         </div>
