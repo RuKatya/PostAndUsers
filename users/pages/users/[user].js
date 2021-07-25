@@ -8,8 +8,6 @@ import { useState } from "react"
 //Components
 import MainLayout from "../../components/mainLayout"
 
-import { Loader, LoaderOptions } from 'google-maps';
-
 export default function User({ user, posts }) {
     const [showCountry, setShowCountry] = useState(false)
     const [showGeo, setShowGeo] = useState(false)
