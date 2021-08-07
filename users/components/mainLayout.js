@@ -8,9 +8,8 @@ export default function MainLayout({ children, title = 'Posts' }) {
     return (
         <>
             <Head>
-                <title> Blog | {title} </title>
-                {/* <link rel="icon" href="/img/favicon.ico" /> */}
 
+                <title> Blog | {title} </title>
             </Head>
             <div className="navBar">
                 <div className="navBar__leftSide">

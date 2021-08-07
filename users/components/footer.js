@@ -28,7 +28,7 @@ export default function Footer() {
                     </Link>
                 </div>
                 <div className="footer__rightText">
-                    Created by Ekaterina Rukosuev
+                    Created by Katya Rukosuev
                 </div>
             </div>
 
