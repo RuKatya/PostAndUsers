@@ -27,9 +27,9 @@ export default function Footer() {
                         <a>Contact us</a>
                     </Link>
                 </div>
-                <div className="footer__rightText">
+                <a href="https://www.linkedin.com/in/katya-rukosuev/" className="footer__rightText">
                     Created by Katya Rukosuev
-                </div>
+                </a>
             </div>
 
         </footer>
